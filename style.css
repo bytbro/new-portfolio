@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "cursive";
+  src: url(./Assets/Editor\'sNote-Italic.ttf);
+}
+:root {
+  --color-dark: #1c1d20;
+  --color-dark-dark: #141517;
+  --color-light: #ffffff;
+  --color-blue: #455ce9;
+  --color-blue-dark: #334bd3;
+  --color-gray: #999d9e;
+  --color-lightgray: #e9eaeb;
+  --color-white: #ffffff;
+  --color-border: rgba(28, 29, 32, 0.175);
+  --color-border-solid: #d2d2d2;
+  --color-border-light: rgba(255, 255, 255, 0.2);
+  --color-border-solid-light: #545557;
+  --color-text: #1c1d20;
+  --color-text-light: #fff;
+  --alert-error: #ff4444;
+  --alert-success: #24c958;
+  --animation-primary: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  --animation-fast: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+  --animation-smooth: all 0.7s cubic-bezier(0.7, 0, 0.3, 1);
+  --animation-slow: all 0.9s cubic-bezier(0.7, 0, 0.3, 1);
+  --section-padding: clamp(5em, 21vh, 12em);
+  --container-padding: clamp(2.5em, 8vw, 8em);
+  --gap-padding: clamp(1.5em, 4vw, 2.5em);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Inter Tight", sans-serif;
+  background-color: var(--color-white);
+}
+
+.header {
+  width: 100%;
+  /* background-color: #c53a3a; */
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: calc(var(--gap-padding) / 2) calc(var(--gap-padding) / 2);
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.links-wrap {
+  display: flex;
+  list-style: none;
+  gap: 0px 10px;
+}
+
+.links-wrap li {
+  position: relative;
+  padding-left: 25px; /*  space for custom bullet */
+}
+
+/* Initially hide the custom bullet */
+.links-wrap li::before {
+  content: "";
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 0;
+  width: 0;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* Show large disc on hover */
+.links-wrap li:hover::before {
+  width: 8px;
+  height: 8px;
+  background-color: #000000; /* change color as needed */
+}
+
+.main-wrap {
+  /* background-color: #24c958; */
+}
+
+.hero-part {
+  padding-top: 25vh;
+  padding-bottom: 25vh;
+  text-align: center;
+}
+.container {
+  margin: 0 auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+h1 {
+  font-size: 10rem;
+  line-height: 9rem;
+}
+h2 {
+  font-size: 5rem;
+  line-height: 4rem;
+}
+
+h2 span {
+  padding-left: calc((var(--gap-padding)) / 4);
+  padding-right: calc((var(--gap-padding)) / 2.5);
+  font-family: "cursive";
+  font-weight: 500;
+  font-size: 3rem;
+  color: var(--color-blue-dark);
+}
+
+.flot-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mini-about {
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+.mini-about .container {
+  padding-top: 10vh;
+  gap: var(--gap-padding);
+  display: flex;
+  justify-content: space-between;
+}
+.right-text-content {
+  row-gap: 1rem;
+  font-size: 22px;
+  align-items: center;
+  /* justify-content: center; */
+  display: flex;
+  flex-direction: column;
+}
+.right-text-content button {
+  width: 11rem;
+  height: 11rem;
+  border-radius: 100px;
+  color: white;
+  background-color: #000000;
+  font-size: 0.8rem;
+}
+.left-text-content {
+  font-weight: 600;
+  font-size: 35px;
+}
+
+.top-3-projects {
+}
+.project1 {
+  margin-right: calc((var(--container-padding)) * 2);
+  margin-left: calc((var(--container-padding)) * 2);
+  height: 80vh;
+  background-color: #000000;
+  border-radius: 2rem;
+}
+
+.skill-snapshot li {
+  padding-top: calc((var(--container-padding))/10) ;
+  padding-bottom: calc((var(--container-padding))/10) ;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  list-style: none;
+  font-size:4rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid  var(--color-gray);
+  /* color: var(--color-gray); */
+}
